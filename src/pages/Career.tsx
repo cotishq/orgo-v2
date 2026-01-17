@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Briefcase, MapPin, Clock, ArrowRight, Users, Award, TrendingUp, Heart } from 'lucide-react';
 import Hero from '../components/Hero';
+import ApplicationModal from '../components/ApplicationModal';
 
 interface JobListing {
   id: string;
@@ -77,6 +79,19 @@ const benefits = [
 ];
 
 export default function Career() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState<JobListing | null>(null);
+
+  const openApplicationModal = (job: JobListing) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
+
+  const closeApplicationModal = () => {
+    setIsModalOpen(false);
+    setSelectedJob(null);
+  };
+
   return (
     <main>
       {/* Hero Section */}
@@ -166,6 +181,7 @@ export default function Career() {
                   </div>
                   <button
                     type="button"
+                    onClick={() => openApplicationModal(job)}
                     className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25 whitespace-nowrap"
                   >
                     Apply Now
@@ -230,6 +246,16 @@ export default function Career() {
           </a>
         </div>
       </section>
+
+      {/* Application Modal */}
+      {selectedJob && (
+        <ApplicationModal
+          isOpen={isModalOpen}
+          onClose={closeApplicationModal}
+          jobTitle={selectedJob.title}
+          jobDepartment={selectedJob.department}
+        />
+      )}
     </main>
   );
 }
