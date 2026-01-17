@@ -4,13 +4,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom colors */
-  --color-primary: #22c55e;
-  --color-primary-dark: #16a34a;
-  --color-primary-light: #4ade80;
-  --color-mint-bg: #f0fdf4;
-  --color-dark-bg: #0f172a;
-  --color-dark-card: #1e293b;
+  /* Custom colors - Blue and Black theme */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  --color-accent-bg: #eff6ff;
+  --color-dark-bg: #0a0a0a;
+  --color-dark-card: #171717;
 
   /* Font family */
   --font-sans: 'Zalando Sans Expanded', system-ui, sans-serif;
@@ -67,10 +67,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #22c55e;
+  background: #2563eb;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a34a;
+  background: #1d4ed8;
 }

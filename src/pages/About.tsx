@@ -41,7 +41,7 @@ export default function About() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-mint-bg to-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-accent-bg to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image Collage */}

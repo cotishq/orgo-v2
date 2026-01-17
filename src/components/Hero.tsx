@@ -24,7 +24,7 @@ export default function Hero({
 }: HeroProps) {
   if (variant === 'page') {
     return (
-      <section className="bg-gradient-to-br from-mint-bg to-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-accent-bg to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {subtitle && (
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
@@ -45,7 +45,7 @@ export default function Hero({
   }
 
   return (
-    <section className="relative bg-gradient-to-br from-mint-bg via-white to-mint-bg overflow-hidden">
+    <section className="relative bg-gradient-to-br from-accent-bg via-white to-accent-bg overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Content */}
@@ -113,8 +113,8 @@ export default function Hero({
 
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,#22c55e_0%,transparent_50%)]" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,#22c55e_0%,transparent_50%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,#2563eb_0%,transparent_50%)]" />
+        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,#2563eb_0%,transparent_50%)]" />
       </div>
     </section>
   );
