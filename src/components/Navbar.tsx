@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, Phone, Cpu } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -23,9 +23,11 @@ export default function Navbar() {
             className="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-primary transition-colors"
             aria-label="OrGo Group Home"
           >
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Cpu className="w-6 h-6 text-white" />
-            </div>
+            <img
+              src="https://www.orgogroup.in/assets/images/og.png"
+              alt="OrGo Group Logo"
+              className="h-10 w-auto"
+            />
             <span className="hidden sm:block">OrGo Group</span>
           </Link>
 

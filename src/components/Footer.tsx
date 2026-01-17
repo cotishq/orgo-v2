@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Cpu, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Send } from 'lucide-react';
 
 const services = [
   'Automation Solutions',
@@ -32,9 +32,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 text-white mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Cpu className="w-6 h-6 text-white" />
-              </div>
+              <img
+                src="https://www.orgogroup.in/assets/images/og.png"
+                alt="OrGo Group Logo"
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-bold">OrGo Group</span>
             </Link>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
@@ -97,7 +99,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-400">
-                  Mumbai, Maharashtra, India
+                202, Ambegaon Valley, Oppo.Swami Narayan Mandir, Near CCD, Amebgaon KH. Pune , Maharashtra - 411046
                 </span>
               </li>
               <li>

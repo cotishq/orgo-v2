@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Award, Users, Briefcase } from 'lucide-react';
 import Hero from '../components/Hero';
 import SectionHeading from '../components/SectionHeading';
 import ServiceCards from '../components/ServiceCards';
+import Customers from '../components/Customers';
 
 const stats = [
   { icon: Award, value: '15+', label: 'Years Experience' },
@@ -21,7 +22,7 @@ export default function Home() {
         description="We provide comprehensive automation solutions, SPM machines, and technical manpower services. Transform your manufacturing with cutting-edge technology and expert engineering."
         ctaText="Explore Our Services"
         ctaLink="/services"
-        imageUrl="https://picsum.photos/seed/orgo-hero/600/600"
+        imageUrl="https://www.orgogroup.in/assets/images/F.jpg"
         showDecorations={true}
       />
 
@@ -138,6 +139,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Customers Section */}
+      <Customers />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary">

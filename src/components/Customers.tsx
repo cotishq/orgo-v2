@@ -1,0 +1,89 @@
+import SectionHeading from './SectionHeading';
+
+const customers = [
+  {
+    name: 'Jendamark India Pvt. Ltd.',
+    location: 'Khed-Shivapur',
+    logo: 'https://www.orgogroup.in/assets/images/Jendamark.png',
+  },
+  {
+    name: 'Haosen Automation Pvt. Ltd.',
+    location: 'Hinjewadi',
+    logo: 'https://www.orgogroup.in/assets/images/Haosen.png',
+  },
+  {
+    name: 'Mikro Innotech India Pvt. Ltd.',
+    location: 'Sasewadi',
+    logo: 'https://www.orgogroup.in/assets/images/Mikro.png',
+  },
+  {
+    name: 'Tata Autocomp Systems',
+    location: 'Pune',
+    logo: 'https://www.orgogroup.in/assets/images/Tata.png',
+  },
+  {
+    name: 'Swastik Tins Pvt. Ltd.',
+    location: 'New-Mumbai',
+    logo: 'https://www.orgogroup.in/assets/images/Swastik.png',
+  },
+  {
+    name: 'TechEra Engineering Ltd.',
+    location: 'Khed-Shivapur',
+    logo: 'https://www.orgogroup.in/assets/images/Tech.png',
+  },
+  {
+    name: 'Venus Automation Pvt. Ltd.',
+    location: 'Warje',
+    logo: 'https://www.orgogroup.in/assets/images/Venus.png',
+  },
+  {
+    name: 'KP Industries',
+    location: 'Bhosari',
+    logo: 'https://www.orgogroup.in/assets/images/Kp.png',
+  },
+  {
+    name: 'Chintamani Thermal',
+    location: 'Handewadi Hadapsar',
+    logo: 'https://www.orgogroup.in/assets/images/Chint.png',
+  },
+  {
+    name: 'iASYS Technology Solutions',
+    location: 'Hinjewadi',
+    logo: 'https://www.orgogroup.in/assets/images/iASYS.png',
+  },
+];
+
+export default function Customers() {
+  return (
+    <section className="py-16 lg:py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          subtitle="Trusted Partners"
+          title="Our Customers"
+          description="We are proud to work with leading companies across various industries, delivering excellence in automation and engineering solutions."
+        />
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {customers.map((customer) => (
+            <div
+              key={customer.name}
+              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group"
+            >
+              <div className="w-full h-20 flex items-center justify-center mb-4">
+                <img
+                  src={customer.logo}
+                  alt={customer.name}
+                  className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+              <h3 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-2">
+                {customer.name}
+              </h3>
+              <p className="text-xs text-gray-500">{customer.location}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
