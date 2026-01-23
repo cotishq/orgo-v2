@@ -1,4 +1,4 @@
-import { useState, useRef, FormEvent } from 'react';
+import { useState, useRef, type FormEvent } from 'react';
 import { X, Upload, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
 interface ApplicationModalProps {

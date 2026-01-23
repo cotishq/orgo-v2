@@ -1,5 +1,7 @@
 import { Target, Eye, Heart, CheckCircle, Award, Users, Briefcase } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
+import orgoFacility from '../assets/orgo-facility.png';
+import orgoTeamCore from '../assets/orgo-team-core.png';
 
 const values = [
   {
@@ -23,13 +25,13 @@ const values = [
 ];
 
 const teamStats = [
-  { icon: Award, value: '15+', label: 'Years of Excellence' },
+  { icon: Award, value: '5+', label: 'Years of Excellence' },
   { icon: Briefcase, value: '500+', label: 'Projects Delivered' },
   { icon: Users, value: '100+', label: 'Satisfied Clients' },
 ];
 
 const milestones = [
-  { year: '2008', title: 'Company Founded', description: 'OrGo Group was established with a vision to revolutionize industrial automation.' },
+  { year: '2021', title: 'Company Founded', description: 'OrGo Group was established with a vision to revolutionize industrial automation.' },
   { year: '2012', title: 'First Major Project', description: 'Successfully completed our first large-scale automation project for automotive industry.' },
   { year: '2015', title: 'Training Institute Launch', description: 'Launched our training institute to develop skilled automation professionals.' },
   { year: '2018', title: 'Expansion', description: 'Expanded operations with new facilities and increased team capacity.' },
@@ -50,23 +52,16 @@ export default function About() {
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
                     <img
-                      src="https://picsum.photos/seed/about1/300/400"
+                      src={orgoTeamCore}
                       alt="Our team"
                       className="w-full h-64 object-cover"
-                    />
-                  </div>
-                  <div className="rounded-2xl overflow-hidden shadow-xl">
-                    <img
-                      src="https://picsum.photos/seed/about2/300/200"
-                      alt="Our work"
-                      className="w-full h-40 object-cover"
                     />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
                     <img
-                      src="https://picsum.photos/seed/about3/300/200"
+                      src={orgoFacility}
                       alt="Our facility"
                       className="w-full h-40 object-cover"
                     />
@@ -90,10 +85,10 @@ export default function About() {
                 About OrGo Group
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Engineering Excellence Since 2008
+                Engineering Excellence Since 2021
               </h1>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                OrGo Group is a leading provider of automation solutions, SPM machines, and technical manpower services. With over 15 years of experience, we have helped hundreds of businesses transform their manufacturing processes.
+                OrGo Group is a leading provider of automation solutions, SPM machines, and technical manpower services. With 5+ years of experience, we have helped hundreds of businesses transform their manufacturing processes.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Our team of expert engineers and technicians are dedicated to delivering innovative solutions that meet the unique needs of each client. We pride ourselves on our commitment to quality, reliability, and customer satisfaction.
@@ -190,9 +185,8 @@ export default function About() {
               {milestones.map((milestone, index) => (
                 <div
                   key={milestone.year}
-                  className={`relative flex items-center gap-8 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
+                  className={`relative flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
                 >
                   {/* Content */}
                   <div className={`flex-1 ml-12 md:ml-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>

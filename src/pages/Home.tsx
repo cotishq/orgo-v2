@@ -4,9 +4,10 @@ import Hero from '../components/Hero';
 import SectionHeading from '../components/SectionHeading';
 import ServiceCards from '../components/ServiceCards';
 import Customers from '../components/Customers';
+import LocationMap from '../components/LocationMap';
 
 const stats = [
-  { icon: Award, value: '15+', label: 'Years Experience' },
+  { icon: Award, value: '5+', label: 'Years Experience' },
   { icon: Briefcase, value: '500+', label: 'Projects Completed' },
   { icon: Users, value: '100+', label: 'Happy Clients' },
   { icon: CheckCircle, value: '50+', label: 'Team Members' },
@@ -75,7 +76,7 @@ export default function Home() {
               <SectionHeading
                 subtitle="Why Choose Us"
                 title="Excellence in Engineering & Automation"
-                description="With over 15 years of experience, we have established ourselves as a trusted partner for automation solutions."
+                description="With 5+ years of experience, we have established ourselves as a trusted partner for automation solutions."
                 align="left"
               />
               <ul className="space-y-4 mb-8">
@@ -142,6 +143,9 @@ export default function Home() {
 
       {/* Customers Section */}
       <Customers />
+
+      {/* Location Section */}
+      <LocationMap />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary">
