@@ -5,10 +5,15 @@ import SectionHeading from '../components/SectionHeading';
 import ServiceCards from '../components/ServiceCards';
 import Customers from '../components/Customers';
 import LocationMap from '../components/LocationMap';
+import imgEngineering from '../assets/images/image34.JPG';
+import imgAutomation from '../assets/images/image44.png';
+import imgManufacturing from '../assets/images/image45.png';
+import imgTechnology from '../assets/images/image68.png';
+import imgHeroBg from '../assets/images/hero-cover.jpg';
 
 const stats = [
   { icon: Award, value: '5+', label: 'Years Experience' },
-  { icon: Briefcase, value: '500+', label: 'Projects Completed' },
+  { icon: Briefcase, value: '350+', label: 'Projects Completed' },
   { icon: Users, value: '100+', label: 'Happy Clients' },
   { icon: CheckCircle, value: '50+', label: 'Team Members' },
 ];
@@ -18,13 +23,14 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <Hero
+        variant="cover"
         subtitle="Welcome to OrGo Group"
         title="All the Solutions for your Automation and SPM Machines"
         description="We provide comprehensive automation solutions, SPM machines, and technical manpower services. Transform your manufacturing with cutting-edge technology and expert engineering."
         ctaText="Explore Our Services"
         ctaLink="/services"
-        imageUrl="https://www.orgogroup.in/assets/images/F.jpg"
-        showDecorations={true}
+        imageUrl={imgHeroBg}
+        showDecorations={false}
       />
 
       {/* Stats Section */}
@@ -107,14 +113,14 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://picsum.photos/seed/why1/300/400"
+                    src={imgEngineering}
                     alt="Engineering"
                     className="w-full h-48 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://picsum.photos/seed/why2/300/250"
+                    src={imgAutomation}
                     alt="Automation"
                     className="w-full h-32 object-cover"
                   />
@@ -123,14 +129,14 @@ export default function Home() {
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://picsum.photos/seed/why3/300/250"
+                    src={imgManufacturing}
                     alt="Manufacturing"
                     className="w-full h-32 object-cover"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://picsum.photos/seed/why4/300/400"
+                    src={imgTechnology}
                     alt="Technology"
                     className="w-full h-48 object-cover"
                   />

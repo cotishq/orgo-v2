@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Users, GraduationCap, Settings, Wrench, Cog } from 'lucide-react';
+import imgAutomation from '../assets/images/image50.png';
+import imgManpower from '../assets/images/image79.jpeg';
+import imgTraining from '../assets/images/image19.jpeg';
+import imgSPM from '../assets/images/image34.JPG';
+import imgMaintenance from '../assets/images/maintenance-support.png';
+import imgConsulting from '../assets/images/engineering-consulting.png';
 
 export interface Service {
   id: string;
@@ -15,42 +21,42 @@ export const services: Service[] = [
     title: 'Automation Solutions',
     description: 'Complete automation solutions for manufacturing and industrial processes. We design and implement cutting-edge automation systems.',
     icon: Cpu,
-    imageUrl: 'https://picsum.photos/seed/automation/400/300',
+    imageUrl: imgAutomation,
   },
   {
     id: 'manpower',
     title: 'ManPower Services',
     description: 'Skilled technical workforce solutions for your automation and manufacturing needs. Expert engineers and technicians on demand.',
     icon: Users,
-    imageUrl: 'https://picsum.photos/seed/manpower/400/300',
+    imageUrl: imgManpower,
   },
   {
     id: 'institute',
     title: 'Training Institute',
     description: 'Professional training programs in automation, PLC programming, and industrial technologies. Build your career with us.',
     icon: GraduationCap,
-    imageUrl: 'https://picsum.photos/seed/institute/400/300',
+    imageUrl: imgTraining,
   },
   {
     id: 'spm',
     title: 'SPM Machines',
     description: 'Custom Special Purpose Machines designed for your specific manufacturing requirements. Precision engineering at its best.',
     icon: Settings,
-    imageUrl: 'https://picsum.photos/seed/spm/400/300',
+    imageUrl: imgSPM,
   },
   {
     id: 'maintenance',
     title: 'Maintenance & Support',
     description: 'Comprehensive maintenance and support services to keep your automation systems running at peak performance.',
     icon: Wrench,
-    imageUrl: 'https://picsum.photos/seed/maintenance/400/300',
+    imageUrl: imgMaintenance,
   },
   {
     id: 'consulting',
     title: 'Engineering Consulting',
     description: 'Expert consulting services for automation projects. From concept to completion, we guide your engineering journey.',
     icon: Cog,
-    imageUrl: 'https://picsum.photos/seed/consulting/400/300',
+    imageUrl: imgConsulting,
   },
 ];
 

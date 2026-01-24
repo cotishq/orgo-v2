@@ -2,6 +2,8 @@ import { Target, Eye, Heart, CheckCircle, Award, Users, Briefcase } from 'lucide
 import SectionHeading from '../components/SectionHeading';
 import orgoFacility from '../assets/orgo-facility.png';
 import orgoTeamCore from '../assets/orgo-team-core.png';
+import imgProjects from '../assets/images/image7.jpeg';
+import imgWhyChoose from '../assets/images/image10.jpeg';
 
 const values = [
   {
@@ -26,7 +28,7 @@ const values = [
 
 const teamStats = [
   { icon: Award, value: '5+', label: 'Years of Excellence' },
-  { icon: Briefcase, value: '500+', label: 'Projects Delivered' },
+  { icon: Briefcase, value: '350+', label: 'Projects Delivered' },
   { icon: Users, value: '100+', label: 'Satisfied Clients' },
 ];
 
@@ -66,9 +68,10 @@ export default function About() {
                       className="w-full h-40 object-cover"
                     />
                   </div>
+
                   <div className="rounded-2xl overflow-hidden shadow-xl">
                     <img
-                      src="https://picsum.photos/seed/about4/300/400"
+                      src={imgProjects}
                       alt="Our projects"
                       className="w-full h-64 object-cover"
                     />
@@ -148,7 +151,7 @@ export default function About() {
                   'Customized solutions tailored to your specific needs',
                   'Experienced team of engineers and technicians',
                   'Comprehensive training and support services',
-                  'Proven track record with 500+ successful projects',
+                  'Proven track record with 350+ successful projects',
                   'Commitment to quality and on-time delivery',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -160,7 +163,7 @@ export default function About() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://picsum.photos/seed/whychoose/600/400"
+                src={imgWhyChoose}
                 alt="Why choose us"
                 className="w-full h-full object-cover"
               />

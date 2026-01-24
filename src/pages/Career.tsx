@@ -150,46 +150,59 @@ export default function Career() {
           </div>
 
           <div className="space-y-4">
-            {jobs.map((job) => (
-              <article
-                key={job.id}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl font-bold text-gray-900">{job.title}</h3>
-                      <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                        {job.department}
-                      </span>
+            {jobs.length > 0 ? (
+              jobs.map((job) => (
+                <article
+                  key={job.id}
+                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                >
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-xl font-bold text-gray-900">{job.title}</h3>
+                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
+                          {job.department}
+                        </span>
+                      </div>
+                      <p className="text-gray-600 mb-3">{job.description}</p>
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" />
+                          {job.location}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Briefcase className="w-4 h-4" />
+                          {job.type}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          Posted recently
+                        </span>
+                      </div>
                     </div>
-                    <p className="text-gray-600 mb-3">{job.description}</p>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {job.location}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Briefcase className="w-4 h-4" />
-                        {job.type}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        Posted recently
-                      </span>
-                    </div>
+                    <button
+                      type="button"
+                      onClick={() => openApplicationModal(job)}
+                      className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25 whitespace-nowrap"
+                    >
+                      Apply Now
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => openApplicationModal(job)}
-                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25 whitespace-nowrap"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                </article>
+              ))
+            ) : (
+              <div className="text-center py-12 bg-white rounded-2xl border-2 border-dashed border-gray-200">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-50 rounded-full mb-4">
+                  <Briefcase className="w-8 h-8 text-gray-400" />
                 </div>
-              </article>
-            ))}
+                <h3 className="text-xl font-bold text-gray-900 mb-2">No Open Positions</h3>
+                <p className="text-gray-500 max-w-md mx-auto">
+                  We don't have any open roles right now, but we're always looking for talent.
+                  Send us your resume below!
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>

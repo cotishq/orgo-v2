@@ -1,4 +1,13 @@
 import { ExternalLink } from 'lucide-react';
+import imgConveyor from '../assets/images/conveyor-system.png';
+import imgEngineTesting from '../assets/images/image38.png';
+import imgEVCharging from '../assets/images/ev-charging-station.png';
+import imgFixture from '../assets/images/image43.jpeg';
+import imgGantry from '../assets/images/image47.png';
+import imgGlassGluing from '../assets/images/image44.png';
+import imgHeatChilling from '../assets/images/image45.png';
+import imgServoCompression from '../assets/images/image39.png';
+import imgTestingBed from '../assets/images/image37.jpeg';
 
 export interface Project {
   id: string;
@@ -11,66 +20,66 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Automated Assembly Line',
+    title: 'Glass Gluing Assembly Line',
     category: 'Automation',
-    imageUrl: 'https://picsum.photos/seed/project1/400/300',
-    description: 'Complete automated assembly line for automotive components',
+    imageUrl: imgGlassGluing,
+    description: 'Automated glass gluing assembly line for automotive components',
   },
   {
     id: '2',
-    title: 'CNC Machine Integration',
+    title: 'Rotating Fixture',
     category: 'SPM',
-    imageUrl: 'https://picsum.photos/seed/project2/400/300',
-    description: 'CNC machine integration with robotic arm handling',
+    imageUrl: imgFixture,
+    description: 'Precision rotating fixture for complex machining operations',
   },
   {
     id: '3',
-    title: 'PLC Control System',
+    title: 'EV Charging Station',
     category: 'Automation',
-    imageUrl: 'https://picsum.photos/seed/project3/400/300',
-    description: 'Industrial PLC control system for manufacturing plant',
+    imageUrl: imgEVCharging,
+    description: 'Smart electric vehicle charging infrastructure solutions',
   },
   {
     id: '4',
-    title: 'Packaging Automation',
+    title: 'Overhead Gantry',
     category: 'Automation',
-    imageUrl: 'https://picsum.photos/seed/project4/400/300',
-    description: 'High-speed packaging automation system',
+    imageUrl: imgGantry,
+    description: 'Heavy-duty overhead gantry system for material handling',
   },
   {
     id: '5',
-    title: 'Quality Inspection System',
+    title: 'Heat Chilling System',
     category: 'SPM',
-    imageUrl: 'https://picsum.photos/seed/project5/400/300',
-    description: 'Vision-based quality inspection system',
+    imageUrl: imgHeatChilling,
+    description: 'Advanced heat chilling system for industrial cooling applications',
   },
   {
     id: '6',
-    title: 'Material Handling Robot',
+    title: 'Belt Testing Bed',
     category: 'Automation',
-    imageUrl: 'https://picsum.photos/seed/project6/400/300',
-    description: 'Automated material handling with robot integration',
+    imageUrl: imgTestingBed,
+    description: 'Automated test bed for verifying conveyor belt performance',
   },
   {
     id: '7',
     title: 'Conveyor System',
-    category: 'SPM',
-    imageUrl: 'https://picsum.photos/seed/project7/400/300',
+    category: 'Special Purpose Machines',
+    imageUrl: imgConveyor,
     description: 'Custom conveyor system for production line',
   },
   {
     id: '8',
-    title: 'Welding Automation',
-    category: 'Automation',
-    imageUrl: 'https://picsum.photos/seed/project8/400/300',
-    description: 'Robotic welding cell for heavy manufacturing',
+    title: 'Servo Compression Machine',
+    category: 'Special Purpose Machines',
+    imageUrl: imgServoCompression,
+    description: 'High-precision servo compression machine for assembly',
   },
   {
     id: '9',
-    title: 'Testing Equipment',
+    title: 'Engine Testing Bed',
     category: 'SPM',
-    imageUrl: 'https://picsum.photos/seed/project9/400/300',
-    description: 'Automated testing and calibration equipment',
+    imageUrl: imgEngineTesting,
+    description: 'Automated engine testing and calibration bed',
   },
 ];
 

@@ -9,7 +9,7 @@ interface HeroProps {
   ctaLink?: string;
   imageUrl?: string;
   showDecorations?: boolean;
-  variant?: 'home' | 'page';
+  variant?: 'home' | 'page' | 'cover';
 }
 
 export default function Hero({
@@ -38,6 +38,52 @@ export default function Hero({
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {description}
             </p>
+          )}
+        </div>
+      </section>
+    );
+  }
+
+  if (variant === 'cover') {
+    return (
+      <section className="relative h-[600px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={imageUrl}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-black/20" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+          {subtitle && (
+            <span className="inline-block text-white/90 font-bold text-sm uppercase tracking-wider mb-4 px-4 py-1 border border-white/30 rounded-full backdrop-blur-sm">
+              {subtitle}
+            </span>
+          )}
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto drop-shadow-sm">
+            {title}
+          </h1>
+          {description && (
+            <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+              {description}
+            </p>
+          )}
+          {ctaText && (
+            <div className="flex justify-center gap-4">
+              <Link
+                to={ctaLink}
+                className="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-50 px-8 py-4 rounded-full font-bold transition-all hover:shadow-lg hover:scale-105"
+              >
+                {ctaText}
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           )}
         </div>
       </section>
