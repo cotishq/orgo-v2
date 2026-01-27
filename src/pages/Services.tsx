@@ -93,7 +93,7 @@ export default function Services() {
                       'Competitive pricing',
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                         <span className="text-gray-700">{item}</span>
                       </li>
                     ))}
@@ -102,8 +102,6 @@ export default function Services() {
                     to="/contact"
                     className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                   >
-                    Get a Quote
-                    <ArrowRight className="w-5 h-5" />
                   </Link>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
@@ -163,7 +161,7 @@ export default function Services() {
             Contact us today to discuss your project requirements. Our team is ready to help you achieve your automation goals.
           </p>
           <a
-            href="tel:+919987274888"
+            href="tel:+917709278809"
             className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25"
           >
             Contact Us Today

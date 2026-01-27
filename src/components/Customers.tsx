@@ -1,11 +1,20 @@
 import SectionHeading from './SectionHeading';
 import OptimizedImage from './OptimizedImage';
 
+import logoJendamark from '../assets/images/jend.jpeg';
+import logoMikro from '../assets/images/mikro.jpeg';
+import logoTata from '../assets/images/tata.jpeg';
+import logoSwastik from '../assets/images/swastik.jpeg';
+import logoVenus from '../assets/images/venus.jpeg';
+import logoKPI from '../assets/images/kpi.jpeg';
+import logoChintamani from '../assets/images/chintamani.jpeg';
+import logoIASYS from '../assets/images/iasys.jpeg';
+
 const customers = [
   {
     name: 'Jendamark India Pvt. Ltd.',
     location: 'Khed-Shivapur',
-    logo: 'https://www.orgogroup.in/assets/images/Jendamark.png',
+    logo: logoJendamark,
   },
   {
     name: 'Haosen Automation Pvt. Ltd.',
@@ -15,17 +24,17 @@ const customers = [
   {
     name: 'Mikro Innotech India Pvt. Ltd.',
     location: 'Sasewadi',
-    logo: 'https://www.orgogroup.in/assets/images/Mikro.png',
+    logo: logoMikro,
   },
   {
     name: 'Tata Autocomp Systems',
     location: 'Pune',
-    logo: 'https://www.orgogroup.in/assets/images/Tata.png',
+    logo: logoTata,
   },
   {
     name: 'Swastik Tins Pvt. Ltd.',
     location: 'New-Mumbai',
-    logo: 'https://www.orgogroup.in/assets/images/Swastik.png',
+    logo: logoSwastik,
   },
   {
     name: 'TechEra Engineering Ltd.',
@@ -35,22 +44,22 @@ const customers = [
   {
     name: 'Venus Automation Pvt. Ltd.',
     location: 'Warje',
-    logo: 'https://www.orgogroup.in/assets/images/Venus.png',
+    logo: logoVenus,
   },
   {
     name: 'KP Industries',
     location: 'Bhosari',
-    logo: 'https://www.orgogroup.in/assets/images/Kp.png',
+    logo: logoKPI,
   },
   {
     name: 'Chintamani Thermal',
     location: 'Handewadi Hadapsar',
-    logo: 'https://www.orgogroup.in/assets/images/Chint.png',
+    logo: logoChintamani,
   },
   {
     name: 'iASYS Technology Solutions',
     location: 'Hinjewadi',
-    logo: 'https://www.orgogroup.in/assets/images/iASYS.png',
+    logo: logoIASYS,
   },
 ];
 
