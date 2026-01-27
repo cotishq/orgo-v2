@@ -1,4 +1,5 @@
 import SectionHeading from './SectionHeading';
+import OptimizedImage from './OptimizedImage';
 
 const customers = [
   {
@@ -70,10 +71,12 @@ export default function Customers() {
               className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group"
             >
               <div className="w-full h-20 flex items-center justify-center mb-4">
-                <img
+                <OptimizedImage
                   src={customer.logo}
                   alt={customer.name}
-                  className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="max-h-full max-w-full grayscale group-hover:grayscale-0 transition-all duration-300"
+                  objectFit="contain"
+                  placeholder="skeleton"
                 />
               </div>
               <h3 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-2">

@@ -1,4 +1,5 @@
 import { ExternalLink } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 import imgConveyor from '../assets/images/conveyor-system.png';
 import imgEngineTesting from '../assets/images/image38.png';
 import imgEVCharging from '../assets/images/ev-charging-station.png';
@@ -99,10 +100,12 @@ export default function ProjectGrid({ limit }: ProjectGridProps) {
         >
           {/* Image */}
           <div className="relative h-56 overflow-hidden">
-            <img
+            <OptimizedImage
               src={project.imageUrl}
               alt={project.title}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+              objectFit="cover"
+              placeholder="skeleton"
             />
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

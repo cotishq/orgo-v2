@@ -5,6 +5,7 @@ import SectionHeading from '../components/SectionHeading';
 import ServiceCards from '../components/ServiceCards';
 import Customers from '../components/Customers';
 import LocationMap from '../components/LocationMap';
+import OptimizedImage from '../components/OptimizedImage';
 import imgEngineering from '../assets/images/image34.JPG';
 import imgAutomation from '../assets/images/image44.png';
 import imgManufacturing from '../assets/images/image45.png';
@@ -94,7 +95,7 @@ export default function Home() {
                   '24/7 maintenance and support',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
@@ -112,33 +113,41 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgEngineering}
                     alt="Engineering"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgAutomation}
                     alt="Automation"
-                    className="w-full h-32 object-cover"
+                    className="w-full h-32"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgManufacturing}
                     alt="Manufacturing"
-                    className="w-full h-32 object-cover"
+                    className="w-full h-32"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgTechnology}
                     alt="Technology"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
               </div>
