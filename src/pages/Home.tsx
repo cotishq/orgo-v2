@@ -164,7 +164,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Manufacturing?
           </h2>
