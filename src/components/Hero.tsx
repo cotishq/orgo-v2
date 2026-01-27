@@ -25,7 +25,7 @@ export default function Hero({
 }: HeroProps) {
   if (variant === 'page') {
     return (
-      <section className="bg-gradient-to-br from-accent-bg to-white py-16 lg:py-24">
+      <section className="bg-linear-to-br from-accent-bg to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {subtitle && (
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
@@ -47,55 +47,65 @@ export default function Hero({
 
   if (variant === 'cover') {
     return (
-      <section className="relative h-[600px] flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <OptimizedImage
-            src={imageUrl}
-            alt={title}
-            className="w-full h-full"
-            objectFit="cover"
-            priority={true}
-            placeholder="blur"
-          />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-black/20" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
-          {subtitle && (
-            <span className="inline-block text-white/90 font-bold text-sm uppercase tracking-wider mb-4 px-4 py-1 border border-white/30 rounded-full backdrop-blur-sm">
-              {subtitle}
-            </span>
-          )}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto drop-shadow-sm">
-            {title}
-          </h1>
-          {description && (
-            <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
-              {description}
-            </p>
-          )}
-          {ctaText && (
-            <div className="flex justify-center gap-4">
-              <Link
-                to={ctaLink}
-                className="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-50 px-8 py-4 rounded-full font-bold transition-all hover:shadow-lg hover:scale-105"
-              >
-                {ctaText}
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
+          <div className="relative overflow-hidden rounded-3xl min-h-[520px] sm:min-h-[560px] flex items-center">
+            {/* Background Image (contained) */}
+            <div className="absolute inset-0 z-0">
+              <OptimizedImage
+                src={imageUrl}
+                alt={title}
+                className="w-full h-full"
+                objectFit="cover"
+                priority={true}
+                placeholder="skeleton"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-black/20" />
             </div>
-          )}
+
+            {/* Content */}
+            <div className="relative z-10 w-full text-center px-4 sm:px-8 lg:px-12 py-10 sm:py-12 lg:py-14">
+              {subtitle && (
+                <span className="inline-block text-white/90 font-bold text-xs sm:text-sm uppercase tracking-wider mb-4 px-4 py-1 border border-white/30 rounded-full backdrop-blur-sm">
+                  {subtitle}
+                </span>
+              )}
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-5 leading-tight max-w-5xl mx-auto drop-shadow-sm px-2 sm:px-6">
+                {title}
+              </h1>
+              {description && (
+                <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-2 sm:px-6">
+                  {description}
+                </p>
+              )}
+
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+                <Link
+                  to={ctaLink}
+                  className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25"
+                >
+                  {ctaText ?? 'Explore Our Services'}
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-primary px-8 py-4 rounded-full font-semibold transition-all hover:shadow-lg"
+                >
+                  About Us
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     );
   }
 
   return (
-    <section className="relative bg-gradient-to-br from-accent-bg via-white to-accent-bg overflow-hidden">
+    <section className="relative bg-linear-to-br from-accent-bg via-white to-accent-bg overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Content */}

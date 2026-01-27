@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
 import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
 import orgoLogo from '../assets/images/LOGO ORGO.jpeg';
 
@@ -42,7 +42,7 @@ export default function Footer() {
               <img
                 src={orgoLogo}
                 alt="OrGo Group Logo"
-                className="h-10 w-10 object-contain"
+                className="h-10 w-10 p-1 object-contain"
                 loading="eager"
                 decoding="async"
               />
@@ -51,20 +51,6 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               Leading provider of automation solutions and SPM machines. We deliver excellence in engineering and manufacturing services.
             </p>
-            <div className="flex items-center gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2.5 bg-dark-card border border-gray-700 rounded-l-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary"
-              />
-              <button
-                type="button"
-                className="px-4 py-2.5 bg-primary hover:bg-primary-dark rounded-r-lg transition-colors"
-                aria-label="Subscribe to newsletter"
-              >
-                <Send className="w-5 h-5 text-white" />
-              </button>
-            </div>
           </div>
 
           {/* Services */}

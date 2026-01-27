@@ -1,12 +1,9 @@
-import { useState } from 'react';
-import { Briefcase, MapPin, Clock, ArrowRight, Users, Award, TrendingUp, Heart } from 'lucide-react';
+import { Briefcase, MapPin, ArrowRight, Users, Award, TrendingUp, Heart } from 'lucide-react';
 import Hero from '../components/Hero';
-import ApplicationModal from '../components/ApplicationModal';
 
 interface JobListing {
   id: string;
   title: string;
-  department: string;
   location: string;
   type: string;
   description: string;
@@ -15,43 +12,51 @@ interface JobListing {
 const jobs: JobListing[] = [
   {
     id: '1',
-    title: 'Automation Engineer',
-    department: 'Engineering',
-    location: 'Mumbai',
+    title: 'Helper',
+    location: 'Pune',
     type: 'Full-time',
-    description: 'Design and implement automation solutions for manufacturing processes.',
+    description:
+      'Support shop-floor teams with daily tasks, material handling, and basic assembly work. A great entry role to grow with our automation and manufacturing operations.',
   },
   {
     id: '2',
-    title: 'PLC Programmer',
-    department: 'Technical',
-    location: 'Mumbai',
+    title: 'Milling Operator',
+    location: 'Pune',
     type: 'Full-time',
-    description: 'Develop and maintain PLC programs for industrial automation systems.',
+    description:
+      'Operate milling machines to produce precision components as per drawings and tolerances. Ensure quality checks, tool care, and safe machine operation.',
   },
   {
     id: '3',
-    title: 'Mechanical Design Engineer',
-    department: 'Engineering',
-    location: 'Mumbai',
+    title: 'M1TR Operator',
+    location: 'Pune',
     type: 'Full-time',
-    description: 'Design mechanical components and systems for SPM machines.',
+    description:
+      'Run and monitor M1TR operations, ensuring consistent output and quality. Coordinate with supervisors for setup, maintenance checks, and production targets.',
   },
   {
     id: '4',
-    title: 'Project Manager',
-    department: 'Management',
-    location: 'Mumbai',
+    title: 'Accountant',
+    location: 'Pune',
     type: 'Full-time',
-    description: 'Lead and manage automation projects from concept to completion.',
+    description:
+      'Handle billing, bookkeeping, and basic compliance documentation with accuracy. Work closely with the operations team to keep financial records organized and up to date.',
   },
   {
     id: '5',
-    title: 'Technical Trainer',
-    department: 'Training',
-    location: 'Mumbai',
+    title: 'Office Boy',
+    location: 'Pune',
     type: 'Full-time',
-    description: 'Conduct training sessions on automation technologies and PLC programming.',
+    description:
+      'Support office operations including deliveries, documentation, and daily coordination. Keep the workplace organized and assist teams as needed.',
+  },
+  {
+    id: '6',
+    title: 'Store Assistant',
+    location: 'Pune',
+    type: 'Full-time',
+    description:
+      'Assist with inventory, inward/outward entries, and store organization for machine parts and materials. Ensure timely availability and accurate stock records.',
   },
 ];
 
@@ -79,19 +84,6 @@ const benefits = [
 ];
 
 export default function Career() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedJob, setSelectedJob] = useState<JobListing | null>(null);
-
-  const openApplicationModal = (job: JobListing) => {
-    setSelectedJob(job);
-    setIsModalOpen(true);
-  };
-
-  const closeApplicationModal = () => {
-    setIsModalOpen(false);
-    setSelectedJob(null);
-  };
-
   return (
     <main>
       {/* Hero Section */}
@@ -142,10 +134,10 @@ export default function Career() {
               Open Positions
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Current Job Openings
+              Job Openings
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our current openings and find the perfect role for you.
+              These are the job roles we are currently open for. Share your details with our HR team to enquire.
             </p>
           </div>
 
@@ -160,9 +152,6 @@ export default function Career() {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="text-xl font-bold text-gray-900">{job.title}</h3>
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                          {job.department}
-                        </span>
                       </div>
                       <p className="text-gray-600 mb-3">{job.description}</p>
                       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
@@ -174,20 +163,19 @@ export default function Career() {
                           <Briefcase className="w-4 h-4" />
                           {job.type}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          Posted recently
-                        </span>
                       </div>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => openApplicationModal(job)}
+                    <a
+                      href={`mailto:hr@orgogroup.in?subject=${encodeURIComponent(
+                        `Job Enquiry: ${job.title}`
+                      )}&body=${encodeURIComponent(
+                        `Hello HR Team,%0D%0A%0D%0AI would like to enquire about the "${job.title}" role in Pune.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AExperience:%0D%0AResume/Details:%0D%0A`
+                      )}`}
                       className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25 whitespace-nowrap"
                     >
-                      Apply Now
+                      Enquire
                       <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </a>
                   </div>
                 </article>
               ))
@@ -243,7 +231,7 @@ export default function Career() {
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             Don't See the Right Role?
           </h2>
@@ -251,7 +239,7 @@ export default function Career() {
             We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <a
-            href="https://wa.me/+919987274884"
+            href="mailto:hr@orgogroup.in?subject=Resume%20Submission&body=Hello%20HR%20Team,%0D%0A%0D%0APlease%20find%20my%20resume%20details%20below:%0D%0A%0D%0AName:%0D%0APhone:%0D%0AExperience:%0D%0AResume%20link%20(or%20attach%20in%20email):%0D%0A"
             className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-full font-semibold transition-all"
           >
             Send Your Resume
@@ -259,16 +247,6 @@ export default function Career() {
           </a>
         </div>
       </section>
-
-      {/* Application Modal */}
-      {selectedJob && (
-        <ApplicationModal
-          isOpen={isModalOpen}
-          onClose={closeApplicationModal}
-          jobTitle={selectedJob.title}
-          jobDepartment={selectedJob.department}
-        />
-      )}
     </main>
   );
 }

@@ -9,6 +9,8 @@ import logoVenus from '../assets/images/venus.jpeg';
 import logoKPI from '../assets/images/kpi.jpeg';
 import logoChintamani from '../assets/images/chintamani.jpeg';
 import logoIASYS from '../assets/images/iasys.jpeg';
+import logoHaosen from '../assets/images/kaosen.jpeg';
+import logoTechEra from '../assets/images/tecchera.jpeg';
 
 const customers = [
   {
@@ -19,7 +21,7 @@ const customers = [
   {
     name: 'Haosen Automation Pvt. Ltd.',
     location: 'Hinjewadi',
-    logo: 'https://www.orgogroup.in/assets/images/Haosen.png',
+    logo: logoHaosen,
   },
   {
     name: 'Mikro Innotech India Pvt. Ltd.',
@@ -39,7 +41,7 @@ const customers = [
   {
     name: 'TechEra Engineering Ltd.',
     location: 'Khed-Shivapur',
-    logo: 'https://www.orgogroup.in/assets/images/Tech.png',
+    logo: logoTechEra,
   },
   {
     name: 'Venus Automation Pvt. Ltd.',
