@@ -66,8 +66,8 @@ export default function LocationMap() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-gray-900 mb-1">Email</p>
-                                            <a href="mailto:hr@orgogroup.in" className="text-gray-600 hover:text-primary transition-colors">
-                                                hr@orgogroup.in
+                                            <a href="mailto:info@orgogroup.in" className="text-gray-600 hover:text-primary transition-colors">
+                                                info@orgogroup.in
                                             </a>
                                         </div>
                                     </div>

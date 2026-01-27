@@ -166,7 +166,7 @@ export default function Career() {
                       </div>
                     </div>
                     <a
-                      href={`mailto:hr@orgogroup.in?subject=${encodeURIComponent(
+                      href={`mailto:info@orgogroup.in?subject=${encodeURIComponent(
                         `Job Enquiry: ${job.title}`
                       )}&body=${encodeURIComponent(
                         `Hello HR Team,%0D%0A%0D%0AI would like to enquire about the "${job.title}" role in Pune.%0D%0A%0D%0AName:%0D%0APhone:%0D%0AExperience:%0D%0AResume/Details:%0D%0A`
@@ -239,7 +239,7 @@ export default function Career() {
             We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <a
-            href="mailto:hr@orgogroup.in?subject=Resume%20Submission&body=Hello%20HR%20Team,%0D%0A%0D%0APlease%20find%20my%20resume%20details%20below:%0D%0A%0D%0AName:%0D%0APhone:%0D%0AExperience:%0D%0AResume%20link%20(or%20attach%20in%20email):%0D%0A"
+            href="mailto:info@orgogroup.in?subject=Resume%20Submission&body=Hello%20HR%20Team,%0D%0A%0D%0APlease%20find%20my%20resume%20details%20below:%0D%0A%0D%0AName:%0D%0APhone:%0D%0AExperience:%0D%0AResume%20link%20(or%20attach%20in%20email):%0D%0A"
             className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-full font-semibold transition-all"
           >
             Send Your Resume

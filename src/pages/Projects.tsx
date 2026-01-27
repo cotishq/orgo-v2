@@ -28,7 +28,7 @@ export default function Projects() {
               <div className="text-white/80">Projects Completed</div>
             </div>
             <div>
-              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">100+</div>
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">25+</div>
               <div className="text-white/80">Happy Clients</div>
             </div>
             <div>

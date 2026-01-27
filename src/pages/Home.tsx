@@ -15,7 +15,7 @@ import imgHeroBg from '../assets/images/hero-cover.jpg';
 const stats = [
   { icon: Award, value: '5+', label: 'Years Experience' },
   { icon: Briefcase, value: '350+', label: 'Projects Completed' },
-  { icon: Users, value: '100+', label: 'Happy Clients' },
+  { icon: Users, value: '25+', label: 'Happy Clients' },
   { icon: CheckCircle, value: '50+', label: 'Team Members' },
 ];
 

@@ -30,7 +30,7 @@ const values = [
 const teamStats = [
   { icon: Award, value: '5+', label: 'Years of Excellence' },
   { icon: Briefcase, value: '350+', label: 'Projects Delivered' },
-  { icon: Users, value: '100+', label: 'Satisfied Clients' },
+  { icon: Users, value: '25+', label: 'Satisfied Clients' },
 ];
 
 const milestones = [
@@ -38,8 +38,8 @@ const milestones = [
   { year: '2022', title: 'First Major Project', description: 'Successfully completed our first large-scale automation project for automotive industry.' },
   { year: '2023', title: 'Training Institute Launch', description: 'Launched our training institute to develop skilled automation professionals.' },
   { year: '2023', title: 'Expansion', description: 'Expanded operations with new facilities and increased team capacity.' },
-  { year: '2024', title: 'Industry Recognition', description: 'Received multiple industry awards for innovation and excellence.' },
-  { year: '2025', title: 'Continued Growth', description: 'Serving 100+ clients across various industries with cutting-edge solutions.' },
+  { year: '2024', title: 'Increase in Customer', description: 'Significant growth in our client base, delivering excellence across multiple industries.' },
+  { year: '2025', title: 'Continued Growth', description: 'Serving 25+ clients across various industries with cutting-edge solutions.' },
 ];
 
 export default function About() {

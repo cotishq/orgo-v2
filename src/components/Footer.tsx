@@ -94,7 +94,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-400">
-                202, Ambegaon Valley, Oppo.Swami Narayan Mandir, Near CCD, Amebgaon KH. Pune , Maharashtra - 411046
+                  202, Ambegaon Valley, Oppo.Swami Narayan Mandir, Near CCD, Amebgaon KH. Pune , Maharashtra - 411046
                 </span>
               </li>
               <li>
@@ -108,11 +108,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hr@orgogroup.in"
+                  href="mailto:info@orgogroup.in"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
                 >
                   <Mail className="w-5 h-5 text-primary shrink-0" />
-                  hr@orgogroup.in
+                  info@orgogroup.in
                 </a>
               </li>
             </ul>
