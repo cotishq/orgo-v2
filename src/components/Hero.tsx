@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 
 interface HeroProps {
   title: string;
@@ -49,10 +50,13 @@ export default function Hero({
       <section className="relative h-[600px] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
+          <OptimizedImage
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
+            objectFit="cover"
+            priority={true}
+            placeholder="blur"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
@@ -125,10 +129,13 @@ export default function Hero({
             {/* Main Image */}
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl shadow-primary/20 border-4 border-white">
-                <img
+                <OptimizedImage
                   src={imageUrl}
                   alt="Hero"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
+                  objectFit="cover"
+                  priority={true}
+                  placeholder="blur"
                 />
               </div>
 

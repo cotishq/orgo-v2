@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Users, GraduationCap, Settings, Wrench, Cog } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 import imgAutomation from '../assets/images/image50.png';
 import imgManpower from '../assets/images/image79.jpeg';
 import imgTraining from '../assets/images/image19.jpeg';
@@ -77,10 +78,12 @@ export default function ServiceCards({ limit = 3, showAll = false }: ServiceCard
         >
           {/* Image */}
           <div className="relative h-48 overflow-hidden">
-            <img
+            <OptimizedImage
               src={service.imageUrl}
               alt={service.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+              objectFit="cover"
+              placeholder="skeleton"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-4 left-4">
