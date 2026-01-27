@@ -42,7 +42,7 @@ export default function Footer() {
               <img
                 src={orgoLogo}
                 alt="OrGo Group Logo"
-                className="h-10 w-10 object-contain"
+                className="h-10 w-10 p-1 object-contain"
                 loading="eager"
                 decoding="async"
               />
