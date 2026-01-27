@@ -1,5 +1,6 @@
 import { Target, Eye, Heart, CheckCircle, Award, Users, Briefcase } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
+import OptimizedImage from '../components/OptimizedImage';
 import orgoFacility from '../assets/orgo-facility.png';
 import orgoTeamCore from '../assets/orgo-team-core.png';
 import imgProjects from '../assets/images/image7.jpeg';
@@ -34,11 +35,11 @@ const teamStats = [
 
 const milestones = [
   { year: '2021', title: 'Company Founded', description: 'OrGo Group was established with a vision to revolutionize industrial automation.' },
-  { year: '2012', title: 'First Major Project', description: 'Successfully completed our first large-scale automation project for automotive industry.' },
-  { year: '2015', title: 'Training Institute Launch', description: 'Launched our training institute to develop skilled automation professionals.' },
-  { year: '2018', title: 'Expansion', description: 'Expanded operations with new facilities and increased team capacity.' },
-  { year: '2022', title: 'Industry Recognition', description: 'Received multiple industry awards for innovation and excellence.' },
-  { year: '2024', title: 'Continued Growth', description: 'Serving 100+ clients across various industries with cutting-edge solutions.' },
+  { year: '2022', title: 'First Major Project', description: 'Successfully completed our first large-scale automation project for automotive industry.' },
+  { year: '2023', title: 'Training Institute Launch', description: 'Launched our training institute to develop skilled automation professionals.' },
+  { year: '2023', title: 'Expansion', description: 'Expanded operations with new facilities and increased team capacity.' },
+  { year: '2024', title: 'Industry Recognition', description: 'Received multiple industry awards for innovation and excellence.' },
+  { year: '2025', title: 'Continued Growth', description: 'Serving 100+ clients across various industries with cutting-edge solutions.' },
 ];
 
 export default function About() {
@@ -53,27 +54,33 @@ export default function About() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
-                    <img
+                    <OptimizedImage
                       src={orgoTeamCore}
                       alt="Our team"
-                      className="w-full h-64 object-cover"
+                      className="w-full h-64"
+                      objectFit="cover"
+                      placeholder="skeleton"
                     />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="rounded-2xl overflow-hidden shadow-xl">
-                    <img
+                    <OptimizedImage
                       src={orgoFacility}
                       alt="Our facility"
-                      className="w-full h-40 object-cover"
+                      className="w-full h-40"
+                      objectFit="cover"
+                      placeholder="skeleton"
                     />
                   </div>
 
                   <div className="rounded-2xl overflow-hidden shadow-xl">
-                    <img
+                    <OptimizedImage
                       src={imgProjects}
                       alt="Our projects"
-                      className="w-full h-64 object-cover"
+                      className="w-full h-64"
+                      objectFit="cover"
+                      placeholder="skeleton"
                     />
                   </div>
                 </div>
@@ -162,10 +169,12 @@ export default function About() {
               </ul>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
+              <OptimizedImage
                 src={imgWhyChoose}
                 alt="Why choose us"
-                className="w-full h-full object-cover"
+                className="w-full h-full"
+                objectFit="cover"
+                placeholder="skeleton"
               />
             </div>
           </div>

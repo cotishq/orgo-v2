@@ -5,6 +5,7 @@ import SectionHeading from '../components/SectionHeading';
 import ServiceCards from '../components/ServiceCards';
 import Customers from '../components/Customers';
 import LocationMap from '../components/LocationMap';
+import OptimizedImage from '../components/OptimizedImage';
 import imgEngineering from '../assets/images/image34.JPG';
 import imgAutomation from '../assets/images/image44.png';
 import imgManufacturing from '../assets/images/image45.png';
@@ -94,7 +95,7 @@ export default function Home() {
                   '24/7 maintenance and support',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
@@ -112,33 +113,41 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgEngineering}
                     alt="Engineering"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgAutomation}
                     alt="Automation"
-                    className="w-full h-32 object-cover"
+                    className="w-full h-32"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgManufacturing}
                     alt="Manufacturing"
-                    className="w-full h-32 object-cover"
+                    className="w-full h-32"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
+                  <OptimizedImage
                     src={imgTechnology}
                     alt="Technology"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48"
+                    objectFit="cover"
+                    placeholder="skeleton"
                   />
                 </div>
               </div>
@@ -155,7 +164,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Manufacturing?
           </h2>
@@ -164,7 +173,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:+919987274888"
+              href="tel:+917709278809"
               className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-full font-semibold transition-all"
             >
               Call Us Now

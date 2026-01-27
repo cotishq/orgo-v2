@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 import imgConveyor from '../assets/images/conveyor-system.png';
 import imgEngineTesting from '../assets/images/image38.png';
 import imgEVCharging from '../assets/images/ev-charging-station.png';
@@ -99,25 +99,20 @@ export default function ProjectGrid({ limit }: ProjectGridProps) {
         >
           {/* Image */}
           <div className="relative h-56 overflow-hidden">
-            <img
+            <OptimizedImage
               src={project.imageUrl}
               alt={project.title}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+              objectFit="cover"
+              placeholder="skeleton"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Category Badge */}
             <span className="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">
               {project.category}
             </span>
-
-            {/* View Icon */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <ExternalLink className="w-5 h-5 text-primary" />
-              </div>
-            </div>
           </div>
 
           {/* Content */}

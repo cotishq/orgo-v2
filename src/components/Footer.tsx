@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
+import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
+import orgoLogo from '../assets/images/LOGO ORGO.jpeg';
+
+const WHATSAPP_WA_ME = 'https://wa.me/917709278809';
 
 const services = [
   'Automation Solutions',
@@ -18,10 +22,13 @@ const companyLinks = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
+  {
+    href: WHATSAPP_WA_ME,
+    label: 'WhatsApp',
+    renderIcon: () => <HugeiconsIcon icon={WhatsappIcon} />,
+  },
+  { icon: Linkedin, href: 'https://linkedin.com/company/orgo-automation/', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://instagram.com/orgo_institute_25', label: 'Instagram' },
 ];
 
 export default function Footer() {
@@ -33,29 +40,17 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 text-white mb-4">
               <img
-                src="https://www.orgogroup.in/assets/images/og.png"
+                src={orgoLogo}
                 alt="OrGo Group Logo"
-                className="h-10 w-auto"
+                className="h-10 w-10 p-1 object-contain"
+                loading="eager"
+                decoding="async"
               />
-              <span className="text-xl font-bold">OrGo Group</span>
+              <span className="text-xl font-bold tracking-tight">OrGo Group</span>
             </Link>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               Leading provider of automation solutions and SPM machines. We deliver excellence in engineering and manufacturing services.
             </p>
-            <div className="flex items-center gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2.5 bg-dark-card border border-gray-700 rounded-l-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary"
-              />
-              <button
-                type="button"
-                className="px-4 py-2.5 bg-primary hover:bg-primary-dark rounded-r-lg transition-colors"
-                aria-label="Subscribe to newsletter"
-              >
-                <Send className="w-5 h-5 text-white" />
-              </button>
-            </div>
           </div>
 
           {/* Services */}
@@ -97,27 +92,27 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-400">
                 202, Ambegaon Valley, Oppo.Swami Narayan Mandir, Near CCD, Amebgaon KH. Pune , Maharashtra - 411046
                 </span>
               </li>
               <li>
                 <a
-                  href="tel:+919987274888"
+                  href="tel:+917709278809"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
                 >
-                  <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                  +91 9987274888
+                  <Phone className="w-5 h-5 text-primary shrink-0" />
+                  +91 7709278809
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@orgogroup.in"
+                  href="mailto:hr@orgogroup.in"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
                 >
-                  <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                  info@orgogroup.in
+                  <Mail className="w-5 h-5 text-primary shrink-0" />
+                  hr@orgogroup.in
                 </a>
               </li>
             </ul>
@@ -130,8 +125,14 @@ export default function Footer() {
                   href={social.href}
                   className="w-10 h-10 bg-dark-card hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <social.icon className="w-5 h-5" />
+                  {'renderIcon' in social && social.renderIcon
+                    ? social.renderIcon()
+                    : 'icon' in social && social.icon
+                      ? <social.icon className="w-5 h-5" />
+                      : null}
                 </a>
               ))}
             </div>

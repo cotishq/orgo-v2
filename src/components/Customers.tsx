@@ -1,55 +1,67 @@
 import SectionHeading from './SectionHeading';
+import OptimizedImage from './OptimizedImage';
+
+import logoJendamark from '../assets/images/jend.jpeg';
+import logoMikro from '../assets/images/mikro.jpeg';
+import logoTata from '../assets/images/tata.jpeg';
+import logoSwastik from '../assets/images/swastik.jpeg';
+import logoVenus from '../assets/images/venus.jpeg';
+import logoKPI from '../assets/images/kpi.jpeg';
+import logoChintamani from '../assets/images/chintamani.jpeg';
+import logoIASYS from '../assets/images/iasys.jpeg';
+import logoHaosen from '../assets/images/kaosen.jpeg';
+import logoTechEra from '../assets/images/tecchera.jpeg';
 
 const customers = [
   {
     name: 'Jendamark India Pvt. Ltd.',
     location: 'Khed-Shivapur',
-    logo: 'https://www.orgogroup.in/assets/images/Jendamark.png',
+    logo: logoJendamark,
   },
   {
     name: 'Haosen Automation Pvt. Ltd.',
     location: 'Hinjewadi',
-    logo: 'https://www.orgogroup.in/assets/images/Haosen.png',
+    logo: logoHaosen,
   },
   {
     name: 'Mikro Innotech India Pvt. Ltd.',
     location: 'Sasewadi',
-    logo: 'https://www.orgogroup.in/assets/images/Mikro.png',
+    logo: logoMikro,
   },
   {
     name: 'Tata Autocomp Systems',
     location: 'Pune',
-    logo: 'https://www.orgogroup.in/assets/images/Tata.png',
+    logo: logoTata,
   },
   {
     name: 'Swastik Tins Pvt. Ltd.',
     location: 'New-Mumbai',
-    logo: 'https://www.orgogroup.in/assets/images/Swastik.png',
+    logo: logoSwastik,
   },
   {
     name: 'TechEra Engineering Ltd.',
     location: 'Khed-Shivapur',
-    logo: 'https://www.orgogroup.in/assets/images/Tech.png',
+    logo: logoTechEra,
   },
   {
     name: 'Venus Automation Pvt. Ltd.',
     location: 'Warje',
-    logo: 'https://www.orgogroup.in/assets/images/Venus.png',
+    logo: logoVenus,
   },
   {
     name: 'KP Industries',
     location: 'Bhosari',
-    logo: 'https://www.orgogroup.in/assets/images/Kp.png',
+    logo: logoKPI,
   },
   {
     name: 'Chintamani Thermal',
     location: 'Handewadi Hadapsar',
-    logo: 'https://www.orgogroup.in/assets/images/Chint.png',
+    logo: logoChintamani,
   },
   {
     name: 'iASYS Technology Solutions',
     location: 'Hinjewadi',
-    logo: 'https://www.orgogroup.in/assets/images/iASYS.png',
+    logo: logoIASYS,
   },
 ];
 
@@ -70,10 +82,12 @@ export default function Customers() {
               className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group"
             >
               <div className="w-full h-20 flex items-center justify-center mb-4">
-                <img
+                <OptimizedImage
                   src={customer.logo}
                   alt={customer.name}
-                  className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="max-h-full max-w-full grayscale group-hover:grayscale-0 transition-all duration-300"
+                  objectFit="contain"
+                  placeholder="skeleton"
                 />
               </div>
               <h3 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-2">

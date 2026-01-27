@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Linkedin, Instagram } from 'lucide-react';
+import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
+import orgoLogo from '../assets/images/LOGO ORGO.jpeg';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -8,6 +10,16 @@ const navLinks = [
   { to: '/projects', label: 'Projects Executed' },
   { to: '/services', label: 'Services' },
   { to: '/career', label: 'Career' },
+];
+
+const WHATSAPP_WA_ME = 'https://wa.me/917709278809';
+const PHONE_TEL = 'tel:+917709278809';
+
+const socialLinks = [
+  { label: 'WhatsApp', href: WHATSAPP_WA_ME, renderIcon: () => <HugeiconsIcon icon={WhatsappIcon} /> },
+  { label: 'LinkedIn', href: 'https://linkedin.com/company/orgo-automation/', icon: Linkedin },
+  { label: 'Instagram', href: 'https://instagram.com/orgo_institute_25', icon: Instagram },
+  { label: 'Call', href: PHONE_TEL, icon: Phone },
 ];
 
 export default function Navbar() {
@@ -24,9 +36,11 @@ export default function Navbar() {
             aria-label="OrGo Group Home"
           >
             <img
-              src="https://www.orgogroup.in/assets/images/og.png"
+              src={orgoLogo}
               alt="OrGo Group Logo"
-              className="h-10 w-auto"
+              className="h-10 w-10 p-1 object-contain"
+              loading="eager"
+              decoding="async"
             />
             <span className="hidden sm:block">OrGo Group</span>
           </Link>
@@ -50,13 +64,24 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <a
-              href="tel:+919987274888"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-primary/25"
-            >
-              <Phone className="w-4 h-4" />
-              <span>ENQUIRY: +91 9987274888</span>
-            </a>
+            <div className="flex items-center gap-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  className="w-10 h-10 bg-gray-100 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors"
+                  aria-label={social.label}
+                  target={social.href.startsWith('tel:') ? undefined : '_blank'}
+                  rel={social.href.startsWith('tel:') ? undefined : 'noreferrer'}
+                >
+                  {'renderIcon' in social && social.renderIcon
+                    ? social.renderIcon()
+                    : 'icon' in social && social.icon
+                      ? <social.icon className="w-5 h-5" />
+                      : null}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,13 +116,24 @@ export default function Navbar() {
                   {link.label}
                 </NavLink>
               ))}
-              <a
-                href="tel:+919987274888"
-                className="mt-4 mx-4 inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-full text-sm font-semibold transition-all"
-              >
-                <Phone className="w-4 h-4" />
-                <span>ENQUIRY: +91 9987274888</span>
-              </a>
+              <div className="mt-4 mx-4 flex items-center justify-center gap-2">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    className="w-11 h-11 bg-gray-100 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors"
+                    aria-label={social.label}
+                    target={social.href.startsWith('tel:') ? undefined : '_blank'}
+                    rel={social.href.startsWith('tel:') ? undefined : 'noreferrer'}
+                  >
+                    {'renderIcon' in social && social.renderIcon
+                      ? social.renderIcon()
+                      : 'icon' in social && social.icon
+                        ? <social.icon className="w-5 h-5" />
+                        : null}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         )}
