@@ -56,7 +56,7 @@ export default function Hero({
             className="w-full h-full"
             objectFit="cover"
             priority={true}
-            placeholder="blur"
+            placeholder="skeleton"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply" />
