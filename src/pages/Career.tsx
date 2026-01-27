@@ -251,7 +251,7 @@ export default function Career() {
             We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <a
-            href="mailto:careers@orgogroup.in"
+            href="https://wa.me/+919987274884"
             className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-full font-semibold transition-all"
           >
             Send Your Resume

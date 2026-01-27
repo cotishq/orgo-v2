@@ -54,8 +54,8 @@ export default function LocationMap() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-gray-900 mb-1">Phone</p>
-                                            <a href="tel:+919987274888" className="text-gray-600 hover:text-primary transition-colors">
-                                                +91 9987274888
+                                            <a href="tel:+917709278809" className="text-gray-600 hover:text-primary transition-colors">
+                                                +91 7709278809
                                             </a>
                                         </div>
                                     </div>
@@ -66,8 +66,8 @@ export default function LocationMap() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-gray-900 mb-1">Email</p>
-                                            <a href="mailto:info@orgogroup.in" className="text-gray-600 hover:text-primary transition-colors">
-                                                info@orgogroup.in
+                                            <a href="mailto:hr@orgogroup.in" className="text-gray-600 hover:text-primary transition-colors">
+                                                hr@orgogroup.in
                                             </a>
                                         </div>
                                     </div>

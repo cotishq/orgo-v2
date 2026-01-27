@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, Cpu, Users, GraduationCap, Settings, Wrench, Cog } from 'lucide-react';
+import { Cpu, Users, GraduationCap, Settings, Wrench, Cog } from 'lucide-react';
 import OptimizedImage from './OptimizedImage';
 import imgAutomation from '../assets/images/image50.png';
 import imgManpower from '../assets/images/image79.jpeg';
@@ -85,7 +84,7 @@ export default function ServiceCards({ limit = 3, showAll = false }: ServiceCard
               objectFit="cover"
               placeholder="skeleton"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-4 left-4">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg">
                 <service.icon className="w-6 h-6 text-white" />
@@ -101,13 +100,6 @@ export default function ServiceCards({ limit = 3, showAll = false }: ServiceCard
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               {service.description}
             </p>
-            <Link
-              to={`/services#${service.id}`}
-              className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all"
-            >
-              Read More
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </article>
       ))}

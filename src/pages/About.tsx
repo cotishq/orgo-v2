@@ -35,11 +35,11 @@ const teamStats = [
 
 const milestones = [
   { year: '2021', title: 'Company Founded', description: 'OrGo Group was established with a vision to revolutionize industrial automation.' },
-  { year: '2012', title: 'First Major Project', description: 'Successfully completed our first large-scale automation project for automotive industry.' },
-  { year: '2015', title: 'Training Institute Launch', description: 'Launched our training institute to develop skilled automation professionals.' },
-  { year: '2018', title: 'Expansion', description: 'Expanded operations with new facilities and increased team capacity.' },
-  { year: '2022', title: 'Industry Recognition', description: 'Received multiple industry awards for innovation and excellence.' },
-  { year: '2024', title: 'Continued Growth', description: 'Serving 100+ clients across various industries with cutting-edge solutions.' },
+  { year: '2022', title: 'First Major Project', description: 'Successfully completed our first large-scale automation project for automotive industry.' },
+  { year: '2023', title: 'Training Institute Launch', description: 'Launched our training institute to develop skilled automation professionals.' },
+  { year: '2023', title: 'Expansion', description: 'Expanded operations with new facilities and increased team capacity.' },
+  { year: '2024', title: 'Industry Recognition', description: 'Received multiple industry awards for innovation and excellence.' },
+  { year: '2025', title: 'Continued Growth', description: 'Serving 100+ clients across various industries with cutting-edge solutions.' },
 ];
 
 export default function About() {

@@ -1,33 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from 'lucide-react';
 import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
+import orgoLogo from '../assets/images/LOGO ORGO.jpeg';
 
-function OrGoMark({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 48 48"
-      className={className}
-      role="img"
-      aria-label="OrGo Group"
-    >
-      <defs>
-        <linearGradient id="orgoMarkGradient" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#2563eb" />
-          <stop offset="1" stopColor="#1d4ed8" />
-        </linearGradient>
-      </defs>
-      <circle cx="24" cy="24" r="22" fill="url(#orgoMarkGradient)" />
-      <circle cx="24" cy="24" r="22" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="2" />
-      <path
-        d="M16 29.5c0-5.25 3.25-10 8.75-10 1.75 0 3.5.5 4.75 1.35v3.25c-1.2-1-2.75-1.6-4.55-1.6-3.35 0-5.55 2.85-5.55 6.95 0 4.05 2.1 6.95 5.55 6.95 1.55 0 2.95-.45 4.05-1.2v-3.8h-3.2v-2.75h6.35v7.9c-1.55 1.45-3.95 2.6-7.2 2.6-5.5 0-8.75-4.75-8.75-9.9Z"
-        fill="#fff"
-        opacity="0.95"
-      />
-    </svg>
-  );
-}
-
-const WHATSAPP_WA_ME = 'https://wa.me/919987274888';
+const WHATSAPP_WA_ME = 'https://wa.me/917709278809';
 
 const services = [
   'Automation Solutions',
@@ -63,7 +39,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 text-white mb-4">
-              <OrGoMark className="h-10 w-10" />
+              <img
+                src={orgoLogo}
+                alt="OrGo Group Logo"
+                className="h-10 w-10 object-contain"
+                loading="eager"
+                decoding="async"
+              />
               <span className="text-xl font-bold tracking-tight">OrGo Group</span>
             </Link>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
@@ -131,20 +113,20 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+919987274888"
+                  href="tel:+917709278809"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
                 >
                   <Phone className="w-5 h-5 text-primary shrink-0" />
-                  +91 9987274888
+                  +91 7709278809
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@orgogroup.in"
+                  href="mailto:hr@orgogroup.in"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
                 >
                   <Mail className="w-5 h-5 text-primary shrink-0" />
-                  info@orgogroup.in
+                  hr@orgogroup.in
                 </a>
               </li>
             </ul>
