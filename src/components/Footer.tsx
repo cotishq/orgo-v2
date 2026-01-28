@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
 import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
-import orgoLogo from '../assets/images/LOGO ORGO.jpeg';
+import orgoLogo from '../assets/images/logo-orgo-new.png';
 
 const WHATSAPP_WA_ME = 'https://wa.me/917709278809';
 
@@ -42,11 +42,10 @@ export default function Footer() {
               <img
                 src={orgoLogo}
                 alt="OrGo Group Logo"
-                className="h-10 w-10 p-1 object-contain"
+                className="h-14 w-auto object-contain"
                 loading="eager"
                 decoding="async"
               />
-              <span className="text-xl font-bold tracking-tight">OrGo Group</span>
             </Link>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               Leading provider of automation solutions and SPM machines. We deliver excellence in engineering and manufacturing services.

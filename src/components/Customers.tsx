@@ -8,7 +8,6 @@ import logoSwastik from '../assets/images/swastik.jpeg';
 import logoVenus from '../assets/images/venus.jpeg';
 import logoKPI from '../assets/images/kpi.jpeg';
 import logoChintamani from '../assets/images/chintamani.jpeg';
-import logoIASYS from '../assets/images/iasys.jpeg';
 import logoHaosen from '../assets/images/kaosen.jpeg';
 import logoTechEra from '../assets/images/tecchera.jpeg';
 
@@ -57,11 +56,6 @@ const customers = [
     name: 'Chintamani Thermal',
     location: 'Handewadi Hadapsar',
     logo: logoChintamani,
-  },
-  {
-    name: 'iASYS Technology Solutions',
-    location: 'Hinjewadi',
-    logo: logoIASYS,
   },
 ];
 

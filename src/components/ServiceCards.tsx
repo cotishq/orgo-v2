@@ -1,6 +1,6 @@
 import { Cpu, Users, GraduationCap, Settings, Wrench, Cog } from 'lucide-react';
 import OptimizedImage from './OptimizedImage';
-import imgAutomation from '../assets/images/image50.png';
+import imgAutomation from '../assets/images/automation-solution-new.png';
 import imgManpower from '../assets/images/image79.jpeg';
 import imgTraining from '../assets/images/image19.jpeg';
 import imgSPM from '../assets/images/image34.JPG';
@@ -17,9 +17,9 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: 'automation',
-    title: 'Automation Solutions',
-    description: 'Complete automation solutions for manufacturing and industrial processes. We design and implement cutting-edge automation systems.',
+    id: 'engineering',
+    title: 'Engineering Services',
+    description: 'Complete engineering services for manufacturing and industrial processes. We design and implement cutting-edge automation systems.',
     icon: Cpu,
     imageUrl: imgAutomation,
   },

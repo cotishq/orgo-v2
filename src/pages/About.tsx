@@ -3,6 +3,7 @@ import SectionHeading from '../components/SectionHeading';
 import OptimizedImage from '../components/OptimizedImage';
 import orgoFacility from '../assets/orgo-facility.png';
 import orgoTeamCore from '../assets/orgo-team-core.png';
+import orgoOffice from '../assets/orgo-office-entrance.png';
 import imgProjects from '../assets/images/image7.jpeg';
 import imgWhyChoose from '../assets/images/image10.jpeg';
 
@@ -58,6 +59,15 @@ export default function About() {
                       src={orgoTeamCore}
                       alt="Our team"
                       className="w-full h-64"
+                      objectFit="cover"
+                      placeholder="skeleton"
+                    />
+                  </div>
+                  <div className="rounded-2xl overflow-hidden shadow-xl">
+                    <OptimizedImage
+                      src={orgoOffice}
+                      alt="Office Entrance"
+                      className="w-full h-40"
                       objectFit="cover"
                       placeholder="skeleton"
                     />

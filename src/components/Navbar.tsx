@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, Phone, Linkedin, Instagram } from 'lucide-react';
 import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
-import orgoLogo from '../assets/images/LOGO ORGO.jpeg';
+import orgoLogo from '../assets/images/logo-orgo-new.png';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -38,11 +38,10 @@ export default function Navbar() {
             <img
               src={orgoLogo}
               alt="OrGo Group Logo"
-              className="h-10 w-10 p-1 object-contain"
+              className="h-14 w-auto object-contain"
               loading="eager"
               decoding="async"
             />
-            <span className="hidden sm:block">OrGo Group</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,8 +51,7 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-primary ${
-                    isActive ? 'text-primary' : 'text-gray-700'
+                  `text-sm font-medium transition-colors hover:text-primary ${isActive ? 'text-primary' : 'text-gray-700'
                   }`
                 }
               >
@@ -106,10 +104,9 @@ export default function Navbar() {
                   to={link.to}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                      isActive
-                        ? 'bg-primary/10 text-primary'
-                        : 'text-gray-700 hover:bg-gray-50'
+                    `px-4 py-3 rounded-lg text-sm font-medium transition-colors ${isActive
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-gray-700 hover:bg-gray-50'
                     }`
                   }
                 >

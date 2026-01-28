@@ -7,7 +7,7 @@ import imgGantry from '../assets/images/image47.png';
 import imgGlassGluing from '../assets/images/image44.png';
 import imgHeatChilling from '../assets/images/image45.png';
 import imgServoCompression from '../assets/images/image39.png';
-import imgTestingBed from '../assets/images/image37.jpeg';
+import imgTestingBed from '../assets/images/bike-belt-testing.png';
 
 export interface Project {
   id: string;
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     title: 'Belt Testing Bed',
     category: 'Automation',
     imageUrl: imgTestingBed,
-    description: 'Automated test bed for verifying conveyor belt performance',
+    description: 'Automated test bed for verifying two-wheeler / bike belt performance',
   },
   {
     id: '7',
