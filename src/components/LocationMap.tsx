@@ -14,8 +14,8 @@ const customIcon = new Icon({
 });
 
 export default function LocationMap() {
-    const address = "202, Ambegaon Valley, Oppo.Swami Narayan Mandir, Near CCD, Amebgaon KH. Pune , Maharashtra - 411046";
-    const position: [number, number] = [18.4552, 73.8370]; // Coordinates for Ambegaon Khurd, Pune
+    const address = "2nd floor, Ambegaon valley, oppo.to swami narayan mandir, 202, near ccd, Pune, Maharashtra 411046";
+    const position: [number, number] = [18.441255779586292, 73.83966038190476]; // Coordinates for new location
 
     return (
         <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
@@ -40,10 +40,10 @@ export default function LocationMap() {
                                         <div>
                                             <p className="font-semibold text-gray-900 mb-1">Address</p>
                                             <p className="text-gray-600 leading-relaxed text-sm">
-                                                202, Ambegaon Valley,<br />
-                                                Oppo. Swami Narayan Mandir,<br />
-                                                Near CCD, Ambegaon KH,<br />
-                                                Pune, Maharashtra - 411046
+                                                2nd floor, Ambegaon Valley,<br />
+                                                Oppo. Swami Narayan Mandir, 202,<br />
+                                                Near CCD, Pune,<br />
+                                                Maharashtra - 411046
                                             </p>
                                         </div>
                                     </div>

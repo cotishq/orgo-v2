@@ -93,7 +93,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-400">
-                  202, Ambegaon Valley, Oppo.Swami Narayan Mandir, Near CCD, Amebgaon KH. Pune , Maharashtra - 411046
+                  2nd floor, Ambegaon valley, oppo.to swami narayan mandir, 202, near ccd, Pune, Maharashtra 411046
                 </span>
               </li>
               <li>
