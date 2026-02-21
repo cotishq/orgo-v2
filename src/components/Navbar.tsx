@@ -12,8 +12,8 @@ const navLinks = [
   { to: '/career', label: 'Career' },
 ];
 
-const WHATSAPP_WA_ME = 'https://wa.me/917709278809';
-const PHONE_TEL = 'tel:+917709278809';
+const WHATSAPP_WA_ME = 'https://wa.me/917666495294';
+const PHONE_TEL = 'tel:+917666495294';
 
 const socialLinks = [
   { label: 'WhatsApp', href: WHATSAPP_WA_ME, renderIcon: () => <HugeiconsIcon icon={WhatsappIcon} /> },
@@ -38,7 +38,7 @@ export default function Navbar() {
             <img
               src={orgoLogo}
               alt="OrGo Group Logo"
-              className="h-14 w-auto object-contain"
+              className="h-[4.5rem] w-auto object-contain"
               loading="eager"
               decoding="async"
             />

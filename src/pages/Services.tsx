@@ -161,7 +161,7 @@ export default function Services() {
             Contact us today to discuss your project requirements. Our team is ready to help you achieve your automation goals.
           </p>
           <a
-            href="tel:+917709278809"
+            href="tel:+917666495294"
             className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-primary/25"
           >
             Contact Us Today

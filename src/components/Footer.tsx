@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
 import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
 import orgoLogo from '../assets/images/logo-orgo-new.png';
 
-const WHATSAPP_WA_ME = 'https://wa.me/917709278809';
+const WHATSAPP_WA_ME = 'https://wa.me/917666495294';
 
 const services = [
   'Automation Solutions',
@@ -98,11 +98,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+917709278809"
+                  href="tel:+917666495294"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors"
                 >
                   <Phone className="w-5 h-5 text-primary shrink-0" />
-                  +91 7709278809
+                  +91 76664 95294
                 </a>
               </li>
               <li>

@@ -47,9 +47,8 @@ export default function Hero({
 
   if (variant === 'cover') {
     return (
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
-          <div className="relative overflow-hidden rounded-3xl min-h-[520px] sm:min-h-[560px] flex items-center">
+      <section className="relative">
+        <div className="relative overflow-hidden min-h-[calc(100vh-4rem)] lg:min-h-[calc(100vh-5rem)] flex items-center">
             {/* Background Image (contained) */}
             <div className="absolute inset-0 z-0">
               <OptimizedImage
@@ -98,7 +97,6 @@ export default function Hero({
                 </Link>
               </div>
             </div>
-          </div>
         </div>
       </section>
     );
