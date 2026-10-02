@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, Phone, Linkedin, Instagram } from 'lucide-react';
-import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
+import { Menu, X, Phone } from 'lucide-react';
 import orgoLogo from '../assets/images/logo-orgo-new.png';
 
 const navLinks = [
@@ -12,13 +11,9 @@ const navLinks = [
   { to: '/career', label: 'Career' },
 ];
 
-const WHATSAPP_WA_ME = 'https://wa.me/917666495294';
 const PHONE_TEL = 'tel:+917666495294';
 
 const socialLinks = [
-  { label: 'WhatsApp', href: WHATSAPP_WA_ME, renderIcon: () => <HugeiconsIcon icon={WhatsappIcon} /> },
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/orgo-automation/', icon: Linkedin },
-  { label: 'Instagram', href: 'https://instagram.com/orgo_institute_25', icon: Instagram },
   { label: 'Call', href: PHONE_TEL, icon: Phone },
 ];
 

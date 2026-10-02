@@ -1,7 +1,7 @@
 import { Cpu, Users, GraduationCap, Settings, Wrench, Cog } from 'lucide-react';
 import OptimizedImage from './OptimizedImage';
 import imgAutomation from '../assets/images/automation-solution-new.png';
-import imgManpower from '../assets/images/image79.jpeg';
+import imgManpower from '../assets/images/manpower-services.jpg';
 import imgTraining from '../assets/images/image19.jpeg';
 import imgSPM from '../assets/images/image34.JPG';
 import imgMaintenance from '../assets/images/maintenance-support.png';

@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
-import { HugeiconsIcon, WhatsappIcon } from './Hugeicons';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import orgoLogo from '../assets/images/logo-orgo-new.png';
-
-const WHATSAPP_WA_ME = 'https://wa.me/917666495294';
 
 const services = [
   'Automation Solutions',
@@ -19,16 +16,6 @@ const companyLinks = [
   { to: '/projects', label: 'Projects' },
   { to: '/services', label: 'Services' },
   { to: '/career', label: 'Career' },
-];
-
-const socialLinks = [
-  {
-    href: WHATSAPP_WA_ME,
-    label: 'WhatsApp',
-    renderIcon: () => <HugeiconsIcon icon={WhatsappIcon} />,
-  },
-  { icon: Linkedin, href: 'https://linkedin.com/company/orgo-automation/', label: 'LinkedIn' },
-  { icon: Instagram, href: 'https://instagram.com/orgo_institute_25', label: 'Instagram' },
 ];
 
 export default function Footer() {
@@ -93,7 +80,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-400">
-                  2nd floor, Ambegaon valley, oppo.to swami narayan mandir, 202, near ccd, Pune, Maharashtra 411046
+                  At . Velu , Tal - Bhor Pune Maharashtra
                 </span>
               </li>
               <li>
@@ -115,26 +102,6 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-3 mt-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="w-10 h-10 bg-dark-card hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
-                  aria-label={social.label}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {'renderIcon' in social && social.renderIcon
-                    ? social.renderIcon()
-                    : 'icon' in social && social.icon
-                      ? <social.icon className="w-5 h-5" />
-                      : null}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 

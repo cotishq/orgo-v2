@@ -4,7 +4,6 @@ import Hero from '../components/Hero';
 import SectionHeading from '../components/SectionHeading';
 import ServiceCards from '../components/ServiceCards';
 import Customers from '../components/Customers';
-import LocationMap from '../components/LocationMap';
 import OptimizedImage from '../components/OptimizedImage';
 import imgEngineering from '../assets/images/image34.JPG';
 import imgAutomation from '../assets/images/image44.png';
@@ -158,9 +157,6 @@ export default function Home() {
 
       {/* Customers Section */}
       <Customers />
-
-      {/* Location Section */}
-      <LocationMap />
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary">
